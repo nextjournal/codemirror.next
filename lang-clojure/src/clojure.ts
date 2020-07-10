@@ -18,7 +18,12 @@ export const clojureSyntax = new LezerSyntax(parser.withProps(
     
   }),
   styleTags({
-    "def defn": "keyword control",
+    Var: "variableName definition",
+    Def: "atom",
+    Defn: "atom",
+    Boolean: "atom",
+    DocString: "+emphasis",
+    Ignored: "!comment",
     Comment: "lineComment",
     Number: "number",
     String: "string",
